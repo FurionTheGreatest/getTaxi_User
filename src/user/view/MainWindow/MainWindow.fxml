@@ -16,7 +16,7 @@
 
 <BorderPane id="main_window" fx:id="borderPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.view.MainWindow.Controller">
    <center>
-      <SplitPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+      <SplitPane orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: client;" styleClass="back" stylesheets="@Theme.css">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
@@ -36,30 +36,33 @@
                         <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label prefHeight="35.0" prefWidth="171.0" text="Нове замовлення" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="235.0" styleClass="header" text="Нове замовлення" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
                         </Label>
-                        <Label text="Ім'я " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <Label text="Номер телефону *" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                        <Label text="Вулиця *" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <Label text="Номер будинку *" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                        <Label text="Під'їзд" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                        <Label styleClass="label1" text="Ім'я " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Label styleClass="label1" text="Номер телефону *" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Label styleClass="label1" text="Вулиця *" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                        <Label styleClass="label1" text="Номер будинку *" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                        <Label styleClass="label1" text="Під'їзд" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
                         <TextField fx:id="name_text" promptText="Ім'я замовника" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                         <TextField fx:id="number_text" promptText="Номер телефону" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="street_text" promptText="Назва вулиці" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextField fx:id="housenumber_text" promptText="Номер будинку " GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextField fx:id="podezd_text" promptText="Номер під'їзду" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label text="Клас таксі *" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+                        <Label styleClass="label1" text="Клас таксі *" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                         <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Label alignment="CENTER" contentDisplay="CENTER" text="Коментар до замовлення" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="label1" text="Коментар до замовлення" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                         <TextArea fx:id="comment" prefHeight="200.0" prefWidth="200.0" promptText="Додаткові умови: наприклад час, на який потрібно доставити машину" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
-                  <Button id="send_button" fx:id="send_button" layoutX="488.0" layoutY="353.0" mnemonicParsing="false" onAction="#init" text="Надіслати" />
+                  <Button id="send_button" fx:id="send_button" layoutX="468.0" layoutY="353.0" mnemonicParsing="false" onAction="#init" text="Надіслати" />
                   <Label fx:id="msg" layoutX="14.0" layoutY="331.0" prefHeight="22.0" prefWidth="380.0" textFill="#dd0b0b" />
-                  <Label id="test" fx:id="test" alignment="BOTTOM_LEFT" layoutX="27.0" layoutY="358.0" prefHeight="17.0" prefWidth="238.0" text="*  — обов'язково для заповнення" wrapText="true" />
+                  <Label id="test" fx:id="test" alignment="BOTTOM_LEFT" layoutX="27.0" layoutY="358.0" prefHeight="17.0" prefWidth="238.0" styleClass="label1" text="*  — обов'язково для заповнення" wrapText="true" />
                </children>
             </AnchorPane>
         </items>

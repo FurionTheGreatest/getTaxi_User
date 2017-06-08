@@ -15,6 +15,7 @@ public class MainWindow extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));     //Відрисовка вікна
         primaryStage.setTitle("getTaxi");
         primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.getScene().getStylesheets().add("user/view/MainWindow/Theme.css");
         primaryStage.show();
         primaryStage.setResizable(false);
         Connection connection;          //встановлення з'єднання з сервером
